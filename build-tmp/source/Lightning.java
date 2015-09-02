@@ -14,41 +14,74 @@ import java.io.IOException;
 
 public class Lightning extends PApplet {
 
-int startX=0; 
-int startY=300; 
+int startX=150; 
+int startY=0; 
 int endX=0; 
 int endY=300;
-
+int count;
 
 public void setup()
 {
   size(300,300);
-  strokeWeight(5);
   background(0);
+  strokeWeight(3);
+  frameRate(10);
+
 }
 public void draw()
 {
-	
-		int i=0;
-     	while(endX<300){
-		endX=startX+(int)(Math.random()*9);
-		endY=startY+(int)(Math.random()*18)-9;
 
-		stroke((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
-		line(startX, startY, endX, endY);
-		startX=endX; 
-		startY=endY;
-	}
+	lightning();
+	lightning2();
+	// startX=150; 
+	// startY=0; 
+	// endX=0; 
+	// endY=150;
+	// fill(0);
+	// rect(0,0,width,height);
+	// lightning();	
+	
 }
 public void mousePressed()
 {
-	startX=0; 
-	startY=300; 
+	
+	startX=150; 
+	startY=0; 
 	endX=0; 
-	endY=300;
+	endY=150;
+	fill(0);
+	rect(0,0,width,height);
 
 }
 
+public void lightning(){
+	
+	int i=0;
+     	while(endY<300){
+		endX=startX+(int)(Math.random()*20)-10;
+		endY=startY+(int)(Math.random()*9);
+
+		stroke(195, (int)(Math.random()*145)+110, 55);
+		line(startX, startY, endX, endY);
+		startX=endX; 
+		startY=endY;
+	
+}
+}
+public void lightning2(){
+	
+	int i=0;
+     	while(endY<300){
+		endX=startX+(int)(Math.random()*20)-10;
+		endY=startY+(int)(Math.random()*9);
+
+		stroke(195, (int)(Math.random()*145)+110, 55);
+		line(startX, startY, endX, endY);
+		startX=endX; 
+		startY=endY;
+	
+}
+}
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "Lightning" };
     if (passedArgs != null) {
