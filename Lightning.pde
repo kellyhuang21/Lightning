@@ -9,7 +9,7 @@ void setup()
 {
   size(300,300);
   background(0);
-  strokeWeight(2);
+  strokeWeight(3);
   frameRate(10);
 
 }
