@@ -10,7 +10,7 @@ void setup()
   size(300,300);
   background(0);
   strokeWeight(2);
-  frameRate(5);
+  frameRate(10);
 
 }
 void draw()
@@ -24,7 +24,7 @@ void draw()
 	rect(0,0,width,height);
 	lightning();
 	if (Math.random() <.5){
-	startX=140; 
+	startX=130; 
 	startY=0; 
 	endX=0; 
 	endY=150;
@@ -32,7 +32,7 @@ void draw()
 }
 	randomLightning = Math.random();
 	if (randomLightning <.2){
-	startX=160; 
+	startX=170; 
 	startY=0; 
 	endX=0; 
 	endY=150;
